@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angkringan Hits</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <div class="mainHeader">
+                <div class="menu" style="cursor: pointer;" onclick="showMenu()" id="btnMenu">
+                    <svg viewBox="0 0 24 24" width='30' height='30'>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                    </svg>
+                </div>
+                <div class="title">
+                    Food Items
+                </div>
+                <div class="navigation">
+                    <div class="search">
+                        <img src='img/icon/magnifying-glass.png' width='24' height=24>
+                    </div>
+
+                    <div class="cart" id="btnOrder" onclick="showListOrder()">
+                        <img src='img/icon/cart.png' width='24' height=24>
+                    </div>
+                </div>
+            </div>
+            <div class="cartHeader">
+                Cart
+                <div class="order" id="countOrder">
+                    0
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <aside id="menu">
+                <!-- Show menu -->
+                <div class="buttonFood">
+                    <img src="img/icon/fork.png">
+                </div>
+                <div class="buttonHistory">
+                    <img src="img/icon/clipboard.png">
+                </div>
+                <div class="buttonAdd" onclick="showAddItem()">
+                    <img src="img/icon/add.png">
+                </div>
+            </aside>
+
+            <section>
+
+                <!-- Show list Products -->
+                
+                <article class="listFood" id="listFood">
+
+                    <!--Show list products-->
+
+                </article>
+
+                <!--Show list orders-->
+
+                <article class="listOrder" id="formOrder">
+                    
+                    <!--If no order yet-->
+                    
+                    <div class="noOrder" id="noOrder">
+                        <div class="icon">
+                            <img src="img/icon/food-and-restaurant.png">
+                        </div>
+                        <div class="title">
+                            Your cart is empty
+                        </div>
+                        <div class="command">
+                            Please add some items from the menu
+                        </div>
+                    </div>
+
+                    <!--Show order-->
+
+                    <div class="order" id="order">
+
+
+                        <div class="list" id="listOrder">
+
+                            <!--Show list item order-->
+                            
+                        </div>
+
+                        <!--Menu for confirm ordered-->
+
+                        <div class="confirm">
+                            <div class="info">
+                                <div class="price">
+                                        <div class="total">
+                                            Total:
+                                        </div>
+                                        <div class="count" id="pay">
+                                            0*
+                                        </div>
+                                </div>
+                                *Belum termasuk ppn
+                            </div>
+                            <div class="action">
+                                <button class="yes" onclick="showCheckout()">Checkout</button>
+                                <button class="no" onclick="clearOrder()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!--Create Modal-->
+
+        <div class="modal" id="modal">
+
+            <!--Checkbox Modal-->
+            <div class="checkout" id="checkout">
+                
+                <!--Header modal-->
+                <div class="header">
+                    <div class="navigation">
+                        <button onclick="closeModal('checkout')">
+                            x
+                        </button>
+                    </div>
+
+                    <div class="type">
+                        <div class="title">
+                            Checkout
+                        </div>
+                        <div class="number">
+                            Receipt no: #010410919
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        Cashier: Nadia
+                    </div>
+                </div>
+
+                <!--Body Modal-->
+                <div class="body">
+                    <div class="listItem" id="checkoutList">
+
+                        <!--Show list order-->
+
+                    </div>
+
+                    <div class="price" id="checkoutPrice">
+                        Total: Rp. 115.500
+                    </div>
+                </div>
+
+                <!--Footer modal-->
+                <div class="footer">
+                    Payment: Cash
+                    <div class="navigation">
+                        <button class="yes" onclick="printCheckout()">Print</button>
+                        Or
+                        <button class="no">Send Email</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal Add Item-->
+            <div class="addItem" id="addItem">
+                <!--Modal Header-->
+                <div class="header">
+                    <div class="title">
+                        Add Item
+                    </div>
+
+                    <div class="navigation">
+                        <button onclick="closeModal('addItem')">
+                            x
+                        </button>
+                    </div>
+                </div>
+
+                <!--Modal Body-->
+                <div class="body">
+                    <div class="title">
+                        <div class="item">
+                            Name
+                        </div>
+                        <div class="item">
+                            Image
+                        </div>
+                        <div class="item">
+                            Price
+                        </div>
+                        <div class="item">
+                            Category
+                        </div>
+                    </div>
+
+                    <div class="action">
+                        <div class="item">
+                            <input type="text" name="productName" id="productName" class="input">
+                        </div>
+                        <div class="item">
+                            <input type="text" name="productName" id="productName" class="input">
+                        </div>
+                        <div class="item">
+                            <input type="text" name="productName" id="productName" class="input">
+                        </div>
+                        <div class="item">
+                            <select id = "myList" class="input">
+                                <option value = "1">Category</option>
+                                <option value = "2">two</option>
+                                <option value = "3">three</option>
+                                <option value = "4">four</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="footer">
+                    <button style="background-color: #F24F8A;">Cancel</button>
+                    <button style="background-color: #57CAD5;">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            
+        </footer>
+    </body>
+</html>
+<script type="text/javascript" src="js/controller.js"></script>
+<script type="text/javascript" src="js/view.js"></script>

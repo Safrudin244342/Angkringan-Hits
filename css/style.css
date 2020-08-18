@@ -1,0 +1,549 @@
+@font-face {
+    font-family: 'Airbnb Cereal App Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Book'), url('/font/AirbnbCerealBook.woff') format('woff');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Airbnb Cereal App Book';
+    font-style: bold;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    margin-top: 0px;
+    background-color: white;
+}
+
+header .mainHeader{
+    flex: 1;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+header .mainHeader .title{
+    font-size: 30px;
+    display: block;
+}
+
+header .mainHeader .navigation .cart{
+    display: none;
+}
+
+header .cartHeader{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+}
+
+header .cartHeader .order{
+    background-color: #57CAD5;
+    width: 20x;
+    text-align: center;
+    font-size: 9pt;
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 50px;
+}
+
+main{
+    display: flex;
+}
+
+main aside{
+    margin-top: 80px;
+    padding: 8.8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+main aside img{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+main aside img:hover{
+    background-color: rgba(190, 195, 202, 0.3);
+    border-radius: 10px;
+}
+
+main section{
+    margin-top: 80px;
+    display: flex;
+    margin-left: auto;
+    flex: 1;
+    justify-content: center;
+}
+
+main section .listFood{
+    margin-left: 70px;
+    margin-right: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    flex: 1;
+    background-color: rgba(190, 195, 202, 0.3);
+    width: 300px;
+    min-height: 500px;
+}
+
+.listFood .item{
+    max-width: 270px;
+    max-height: 272px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.listFood .item:hover{
+    background-color: #BBBBBB;
+}
+
+.listFood .item .img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.listFood .item .img img{
+    width: 250px;
+    height: 200px;
+}
+
+.listFood .item .img .select{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 67%;
+    background-color: black;
+    opacity: 0.5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding-top: 25%;
+}
+
+.listFood .item .img .select img{
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+
+.listFood .item .price{
+    font-weight: bold;
+}
+
+.listFood .item .name{
+    font-size: 15pt;
+}
+
+main section .listOrder{
+    background-color: white;
+    position: fixed;
+    display: flex;
+    margin-left: 70%;
+    width: 30%;
+    height: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.listOrder .noOrder{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.noOrder .title{
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.noOrder .command{
+    color: #CECECE;
+}
+
+.listOrder .order{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.order .list{
+    color: black;
+    height: 60%;
+}
+
+.order .list .item{
+    display: flex;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.order .list .item img{
+    width: 90px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.order .list .navigation{
+    padding: 5px;
+}
+
+.order .list .navigation .title{
+    font-size: 10pt;
+    padding-bottom: 5px;
+}
+
+.order .list .navigation .action{
+    width: 85px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #82DE3A;
+    color: #82DE3A;
+    bottom: 0px;
+}
+
+.order .list .navigation .action .estimasi{
+    margin: 2px;
+}
+
+.order .list .navigation .action button{
+    background-color: rgba(130, 222, 58, 0.2);
+    border: none;
+    width: 25px;
+    color: #82DE3A;
+    font-size: 20px;
+}
+
+.order .list .price{
+    margin-left: auto;
+    margin-top: 45px;
+    font-size: 15pt;
+}
+
+.order .confirm{
+    color: black;
+}
+
+.confirm .info{
+    padding: 10px;
+}
+
+.confirm .info .price{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.confirm .action button.yes{
+    font-size: 13pt;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    margin: 3px;
+    background-color: #57CAD5;
+}
+
+.confirm .action button.no{
+    font-size: 13pt;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    margin: 3px;
+    background-color: #F24F8A;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+    padding: 20px;
+    z-index: 1;
+}
+
+.modal .checkout{
+    justify-self: center;
+    width: 50%;
+    height: 85%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: none;
+}
+
+.checkout .header .navigation{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkout .header .navigation button{
+    border: none;
+    font-size: 20pt;
+    font-weight: bold;
+    background-color: white;
+}
+
+.checkout .header .type{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 17pt;
+}
+
+.checkout .header .info{
+    padding: 10px;
+}
+
+.checkout .body{
+    padding: 10px;
+}
+
+.checkout .body .listItem{
+    height: 130px;
+}
+
+.checkout .body .listItem .item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout .body .listItem .item .name{
+    width: 200px;
+}
+
+.checkout .body .price{
+    padding-top: 20px;
+    text-align: right;
+}
+
+.checkout .footer .navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.checkout .footer .navigation button{
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20pt;
+}
+
+.checkout .footer .navigation button.yes{
+    background-color: #F24F8A;
+}
+
+.checkout .footer .navigation button.no{
+    background-color: #57CAD5;
+}
+
+.modal .addItem{
+    justify-self: center;
+    width: 35%;
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: none;
+}
+
+.addItem .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addItem .title{
+    font-size: 20pt;
+}
+
+.addItem .header .navigation{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addItem .header .navigation button{
+    border: none;
+    font-size: 20pt;
+    font-weight: bold;
+    background-color: white;
+}
+
+.addItem .body{
+    height: 70%;
+    padding: 10px;
+    display: flex;
+}
+
+.addItem .body .item{
+    margin-top: 15px;
+    padding-right: 30px;
+}
+
+.addItem .body .action .input{
+    border: none;
+    background-color: white;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 35px;
+    width: 250px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.addItem .footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addItem .footer button{
+    margin: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px){
+    header .mainHeader .title{
+        font-size: 20px;
+    }
+
+    header .cartHeader{
+        display: none;
+    }
+
+    header .mainHeader .navigation{
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .mainHeader .navigation .cart{
+        display: block;
+    }
+
+    header .mainHeader .navigation img{
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    main aside{
+        margin-top: 74px;
+        display: none;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    main aside img{
+        margin-top: 0px;
+    }
+
+    main section{
+        margin-top: 74px;
+    }
+
+    main section .listFood{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    main section .listOrder{
+        display: none;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .listFood .item{
+        max-width: 270px;
+        max-height: 272px;
+    }
+
+    .listFood .item .img img{
+        width: 250px;
+        height: 200px;
+    }
+
+    .order .list{
+        color: black;
+        height: 60%;
+    }
+    
+    .order .list .item{
+        display: flex;
+        padding: 10px;
+        font-weight: bold;
+    }
+    
+    .order .list .item img{
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+    }
+
+    .modal, .modal .checkout{
+        padding: 0px;
+    }
+
+    .modal .checkout{
+        font-size: 10pt;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .checkout .header .navigation button{
+        margin-right: 10px;
+    }
+
+    .checkout .header .type{
+        font-size: 13pt;
+    }
+}
