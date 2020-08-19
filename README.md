@@ -36,11 +36,11 @@ Checkout view
 
 Start up view
 
-<img src="doc/tablet1.png">
+<img src="doc/tablet2.png">
 
 Select item view
 
-<img src="doc/tablet2.png">
+<img src="doc/tablet1.png">
 
 # Live Sample
 
