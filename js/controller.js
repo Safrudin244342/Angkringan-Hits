@@ -172,20 +172,22 @@ function addCart(id){
         newOrder.setAttribute("id", `order${product.id}`)
         newOrder.innerHTML = `
             <img src="${product.image}">
-            <div class="navigation">
+            <div class="detail">
                 <div class="title">
                     ${product.name}
                 </div>
-                <div class="action">
-                    <button onclick="changeDownEstimasi(${product.id})">-</button>
-                    <div id="estimasiOrder${product.id}" class="estimasi">
-                        1
+                <div class="navigation">
+                    <div class="action">
+                        <button onclick="changeDownEstimasi(${product.id})">-</button>
+                        <div id="estimasiOrder${product.id}" class="estimasi">
+                            1
+                        </div>
+                        <button onclick="changeUpEstimasi(${product.id})">+</button>
                     </div>
-                    <button onclick="changeUpEstimasi(${product.id})">+</button>
+                    <div class="price" id="itemOrderPrice${product.id}">
+                        Rp. ${changeToRupiah(product.price)}
+                    </div>
                 </div>
-            </div>
-            <div class="price" id="itemOrderPrice${product.id}">
-                Rp. ${changeToRupiah(product.price)}
             </div>
         `;
 

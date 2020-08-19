@@ -1,8 +1,6 @@
 function showProducts(listProduct){
     listProduct.forEach(value => {
         let newItem = document.createElement("div")
-        let name = value.name;
-        let sortName = name.length > 16 ? `${name.split('').splice(0, 13).join('')}...` : name;
         
         newItem.setAttribute("class", "item select")
         newItem.setAttribute("id", `product${value.id}`)
@@ -12,7 +10,7 @@ function showProducts(listProduct){
                 <img src="${value.image}">
             </div>
             <div class="name">
-                ${sortName}
+                ${value.name}
             </div>
             <div class="price">
                 Rp. ${changeToRupiah(value.price)}
@@ -41,6 +39,11 @@ function closeModal(id){
 
         let remOrder = document.getElementById(`checkoutItemtax`)
         remOrder.parentNode.removeChild(remOrder)
+    }else if(id == "addItem"){
+
+        document.getElementById("productName").value = ""
+        document.getElementById("productImage").value = ""
+        document.getElementById("productPrice").value = ""
     }
 }
 
@@ -96,6 +99,7 @@ function showCheckout(){
 }
 
 function showMenu(){
+    if (screen.width > 800) return false;
     document.getElementById("menu").style.setProperty("display", "flex");
     document.getElementById("btnMenu").setAttribute("onclick", "hideMenu()");
 }
