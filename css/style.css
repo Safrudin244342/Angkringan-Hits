@@ -345,6 +345,7 @@ main section .listOrder{
 
 .checkout .body .listItem .item{
     display: flex;
+    padding-top: 20px;
     justify-content: space-between;
 }
 
@@ -353,7 +354,6 @@ main section .listOrder{
 }
 
 .checkout .body .price{
-    padding-top: 20px;
     text-align: right;
 }
 
