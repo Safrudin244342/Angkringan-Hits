@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Angkringan Hits 3</title>
+        <title>Angkringan Hits</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/max-400px.css">
+        <link rel="stylesheet" href="css/max-600px.css">
+        <link rel="stylesheet" href="css/max-800px.css">
     </head>
 
     <body>
@@ -203,25 +206,22 @@
                             <input type="text" name="productName" id="productName" class="input">
                         </div>
                         <div class="item">
-                            <input type="text" name="productName" id="productName" class="input">
+                            <input type="text" name="productName" id="productImage" class="input">
                         </div>
                         <div class="item">
-                            <input type="text" name="productName" id="productName" class="input">
+                            <input type="text" name="productName" id="productPrice" class="input">
                         </div>
                         <div class="item">
-                            <select id = "myList" class="input">
-                                <option value = "1">Category</option>
-                                <option value = "2">two</option>
-                                <option value = "3">three</option>
-                                <option value = "4">four</option>
-                            </select>
+                            <div class="dropdown">
+                                Category
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!--Footer-->
                 <div class="footer">
-                    <button style="background-color: #F24F8A;">Cancel</button>
+                    <button style="background-color: #F24F8A;" onclick="closeModal('addItem')">Cancel</button>
                     <button style="background-color: #57CAD5;">Add</button>
                 </div>
             </div>
