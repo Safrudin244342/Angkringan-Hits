@@ -2,7 +2,7 @@
     font-family: 'Airbnb Cereal App Book';
     font-style: normal;
     font-weight: normal;
-    src: local('Airbnb Cereal App Book'), url('/font/AirbnbCerealBook.woff') format('woff');
+    src: local('Airbnb Cereal App Book'), url('AirbnbCerealBook.woff') format('woff');
 }
 
 * {
@@ -70,10 +70,11 @@ main aside{
     padding: 8.8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     background-color: white;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100%;
     box-sizing: border-box;
-    display: block;
 }
 
 main aside img{
@@ -112,7 +113,6 @@ main section .listFood{
 
 .listFood .item{
     max-width: 270px;
-    max-height: 272px;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -210,35 +210,47 @@ main section .listOrder{
 
 .order .list .item img{
     width: 90px;
+    height: 90px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.order .list .navigation{
+.order .list .detail{
     padding: 5px;
 }
 
-.order .list .navigation .title{
-    font-size: 10pt;
+.order .list .detail .title{
+    font-size: 15pt;
     padding-bottom: 5px;
+    box-sizing: border-box;
 }
 
-.order .list .navigation .action{
+.order .list .detail .navigation{
+    width: 250px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.order .list .detail .navigation .action{
     width: 85px;
+    height: 30px;
     display: flex;
     justify-content: space-between;
     border: 1px solid #82DE3A;
     color: #82DE3A;
+    margin-top: 10px;
     bottom: 0px;
 }
 
-.order .list .navigation .action .estimasi{
+.order .list .detail .navigation .action .estimasi{
     margin: 2px;
 }
 
-.order .list .navigation .action button{
+.order .list .detail .navigation .action button{
     background-color: rgba(130, 222, 58, 0.2);
     border: none;
     width: 25px;
@@ -246,9 +258,9 @@ main section .listOrder{
     font-size: 20px;
 }
 
-.order .list .price{
+.order .list .detail .navigation .price{
     margin-left: auto;
-    margin-top: 45px;
+    margin-top: 15px;
     font-size: 15pt;
 }
 
@@ -315,6 +327,7 @@ main section .listOrder{
 .checkout .header .navigation{
     display: flex;
     justify-content: flex-end;
+    padding-right: 10px;
 }
 
 .checkout .header .navigation button{
@@ -345,12 +358,13 @@ main section .listOrder{
 
 .checkout .body .listItem .item{
     display: flex;
-    padding-top: 20px;
+    padding-top: 10px;
     justify-content: space-between;
 }
 
 .checkout .body .listItem .item .name{
     width: 200px;
+    height: 20px;
 }
 
 .checkout .body .price{
@@ -451,99 +465,4 @@ main section .listOrder{
     padding: 10px;
     width: 100px;
     border-radius: 10px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 700px){
-    header .mainHeader .title{
-        font-size: 20px;
-    }
-
-    header .cartHeader{
-        display: none;
-    }
-
-    header .mainHeader .navigation{
-        display: flex;
-        flex-direction: row;
-    }
-
-    header .mainHeader .navigation .cart{
-        display: block;
-    }
-
-    header .mainHeader .navigation img{
-        cursor: pointer;
-        margin-right: 10px;
-    }
-
-    main aside{
-        margin-top: 74px;
-        display: none;
-        flex-direction: column;
-        z-index: 1;
-    }
-
-    main aside img{
-        margin-top: 0px;
-    }
-
-    main section{
-        margin-top: 74px;
-    }
-
-    main section .listFood{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    main section .listOrder{
-        display: none;
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .listFood .item{
-        max-width: 270px;
-        max-height: 272px;
-    }
-
-    .listFood .item .img img{
-        width: 250px;
-        height: 200px;
-    }
-
-    .order .list{
-        color: black;
-        height: 60%;
-    }
-    
-    .order .list .item{
-        display: flex;
-        padding: 10px;
-        font-weight: bold;
-    }
-    
-    .order .list .item img{
-        width: 70px;
-        height: 70px;
-        border-radius: 10px;
-    }
-
-    .modal, .modal .checkout{
-        padding: 0px;
-    }
-
-    .modal .checkout{
-        font-size: 10pt;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .checkout .header .navigation button{
-        margin-right: 10px;
-    }
-
-    .checkout .header .type{
-        font-size: 13pt;
-    }
 }

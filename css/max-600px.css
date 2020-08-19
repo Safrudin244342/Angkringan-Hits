@@ -1,0 +1,113 @@
+@media screen and (max-width: 600px) and (min-width: 420px){
+    header .mainHeader .title{
+        font-size: 20px;
+    }
+
+    header .cartHeader{
+        display: none;
+    }
+
+    header .mainHeader .navigation{
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .mainHeader .navigation .cart{
+        display: block;
+    }
+
+    header .mainHeader .navigation img{
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    main aside{
+        margin-top: 74px;
+        display: none;
+        z-index: 1;
+    }
+
+    main aside img{
+        margin-top: 0px;
+    }
+
+    main section{
+        margin-top: 74px;
+    }
+
+    main section .listFood{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .listFood .item{
+        width: 40%;
+        height: 230px;
+    }
+
+    .listFood .item .img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    main section .listOrder{
+        display: none;
+        z-index: 1;
+        width: 50%;
+        margin-left: 10%;
+    }
+
+    .order .list{
+        color: black;
+        height: 60%;
+    }
+    
+    .order .list .item{
+        display: flex;
+        padding-top: 5px;
+        font-weight: bold;
+    }
+    
+    .order .list .item img{
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+    }
+
+    .order .list .detail .title{
+        font-size: 10pt;
+    }
+
+    .order .list .detail .navigation{
+        width: 300px;
+    }
+
+    .order .list .detail .navigation .action{
+        margin-top: 5px;
+    }
+
+    .order .list .detail .navigation .price{
+        margin-top: 10px;
+        font-size: 12pt;
+    }
+
+    .modal, .modal .checkout{
+        padding: 0px;
+        border-radius: 0px;
+    }
+
+    .modal .checkout{
+        font-size: 10pt;
+        margin-top: 10px;
+        width: 100%;
+        height: 78%;
+    }
+
+    .checkout .header .detail button{
+        margin-right: 10px;
+    }
+
+    .checkout .header .type{
+        font-size: 13pt;
+    }
+}
