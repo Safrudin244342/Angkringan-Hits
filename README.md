@@ -32,6 +32,16 @@ Checkout view
 
 <img src="doc/mobile3.png">
 
+# tablet
+
+Start up view
+
+<img src="doc/tablet1.png">
+
+Select item view
+
+<img src="doc/tablet2.png">
+
 # Live Sample
 
 https://mystifying-hodgkin-bc6497.netlify.app/
