@@ -53,7 +53,7 @@
                 </div>
             </aside>
 
-            <section>
+            <section class="main">
 
                 <!-- Show list Products -->
                 
@@ -186,34 +186,39 @@
 
                 <!--Modal Body-->
                 <div class="body">
-                    <div class="title">
-                        <div class="item">
-                            Name
-                        </div>
-                        <div class="item">
-                            Image
-                        </div>
-                        <div class="item">
-                            Price
-                        </div>
-                        <div class="item">
-                            Category
+                    <div class="item">
+                        <div class="title">Name</div>
+                        <div class="action">
+                            <input type="text" name="addProductName" id="addProductName">
                         </div>
                     </div>
 
-                    <div class="action">
-                        <div class="item">
-                            <input type="text" name="productName" id="productName" class="input">
+                    <div class="item">
+                        <div class="title">Image</div>
+                        <div class="action">
+                            <input type="text" name="addProductImage" id="addProductImage">
                         </div>
-                        <div class="item">
-                            <input type="text" name="productName" id="productImage" class="input">
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Price</div>
+                        <div class="action">
+                            <input type="text" name="addProductPrice" id="addProductPrice" style="width: 80%;">
                         </div>
-                        <div class="item">
-                            <input type="text" name="productName" id="productPrice" class="input">
-                        </div>
-                        <div class="item">
-                            <div class="dropdown">
-                                Category
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Category</div>
+                        <div class="action">
+                            <div class="dropdown" style="width: 60%;">
+                                <div class="header">
+                                    <div class="value">Category</div>
+                                    <div class="icon"><img src="img/icon/Polygon.png"></div>
+                                </div>
+                                <div class="list">
+                                    <div class="item">Food</div>
+                                    <div class="item">Drink</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -234,3 +239,6 @@
 </html>
 <script type="text/javascript" src="js/controller.js"></script>
 <script type="text/javascript" src="js/view.js"></script>
+<script>
+    showProducts(listProducts)
+</script>
