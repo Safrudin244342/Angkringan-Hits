@@ -1,0 +1,209 @@
+main section.main{
+    padding: 10px;
+    margin-top: 70px;
+    display: flex;
+    margin-left: auto;
+    flex: 1;
+    justify-content: center;
+}
+
+main section.main .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+main section.main .header .card{
+    padding: 30px;
+    width: 350px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.card .name, .card .info{
+    font-size: 10pt;
+}
+
+.card .price{
+    font-size: 20px;
+}
+
+.card.pink{
+    background: linear-gradient(278.29deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%); 
+    filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25)); 
+    box-shadow: 5px 8px 4px 0px #ffc8ca;
+}
+
+.card.blue{
+    background: linear-gradient(278.29deg, #29DFFF 30.05%, rgba(41, 223, 255, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+    box-shadow: 5px 8px 4px 0px #9de9f7;
+}
+
+.card.purple{
+    background: linear-gradient(278.29deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+    box-shadow: 5px 8px 4px 0px #dfb6ff;
+}
+
+main section.main .main{
+    display: flex;
+    flex-direction: column;
+}
+
+main section.main .main .chart{
+    box-shadow: 0px 4px 8px 0px rgb(189, 189, 189);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+main section.main .main .chart .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.main .main .chart .header .name{
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+main section.main .main .chart .header .action{
+    background-color: #CECECE;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+    padding: 20px;
+    z-index: 1;
+}
+
+.modal .addItem{
+    justify-self: center;
+    width: 35%;
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: none;
+}
+
+.addItem .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addItem .header .title{
+    font-size: 20pt;
+}
+
+.addItem .header .navigation{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addItem .header .navigation button{
+    border: none;
+    font-size: 20pt;
+    font-weight: bold;
+    background-color: white;
+}
+
+.addItem .body{
+    height: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addItem .body .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.addItem .body .item .title{
+    width: 40%;
+    font-size: 15pt;
+}
+
+.addItem .body .item .action{
+    flex: 1;
+}
+
+.addItem .body .item .action .dropdown, .addItem .body .item .action input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px 2px rgba(190, 195, 202, 0.3);
+    border: 0px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.addItem .body .item .action .dropdown:hover .list{
+    display: block;
+}
+
+.addItem .body .item .action .dropdown .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addItem .body .item .action .dropdown .header img{
+    width: 20px;
+}
+
+.addItem .body .item .action .dropdown .list{
+    background-color: white;
+    display: none;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 4px 8px 2px rgba(190, 195, 202, 0.3);
+}
+
+.addItem .body .item .action .dropdown .list .item{
+    padding: 10px;
+    margin-top: 0px;
+}
+
+.addItem .body .item .action .dropdown .list .item:hover{
+    background-color: rgba(190, 195, 202, 1);
+}
+
+.addItem .footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addItem .footer button{
+    margin: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+}

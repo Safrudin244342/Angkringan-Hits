@@ -1,0 +1,20 @@
+@media screen and (max-width: 400px){
+    main section.main{
+        padding: 0px;
+        width: 100%;
+    }
+
+    main section.main .main{
+        margin: 0px;
+    }
+
+    main aside{
+        margin-top: 74px;
+        display: none;
+        z-index: 1;
+    }
+
+    main aside img{
+        margin-top: 0px;
+    }
+}
