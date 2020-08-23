@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angkringan Hits</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/history.css" type="text/css">
+        <link rel="stylesheet" href="css/max-400px-history.css">
+        <link rel="stylesheet" href="css/max-600px.css">
+        <link rel="stylesheet" href="css/max-800px.css">
+        <script type="text/javascript" src="js/view.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="mainHeader">
+                <div class="menu" style="cursor: pointer;" onclick="showMenu()" id="btnMenu">
+                    <svg viewBox="0 0 24 24" width='30' height='30'>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                    </svg>
+                </div>
+                <div class="title">
+                    History
+                </div>
+                <div class="navigation">
+                    <div class="search" style="display: none;">
+                        <img src='img/icon/magnifying-glass.png' width='24' height=24>
+                    </div>
+
+                    <div class="cart" id="btnOrder" onclick="showListOrder()" style="display: none;">
+                        <img src='img/icon/cart.png' width='24' height=24>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <aside id="menu" class="subMenu">
+                <!-- Show menu -->
+                <div class="buttonFood">
+                    <a href="./">
+                        <img src="img/icon/fork.png" style="width: 50px; height: 50px;">
+                    </a>
+                </div>
+                <div class="buttonHistory">
+                    <a href="./history.html">
+                        <img src="img/icon/clipboard.png" style="width: 50px; height: 50px;">
+                    </a>
+                </div>
+                <div class="buttonAdd" onclick="showAddItem()">
+                    <img src="img/icon/add.png" style="width: 50px; height: 50px;">
+                </div>
+            </aside>
+
+            <section class="main">
+
+                <article>
+                <div class="main">
+                    <div class="header">
+                        <div class="card pink">
+                            <div class="name">
+                                Today's Income
+                            </div>
+                            <div class="price">
+                                Rp. 1.000.000
+                            </div>
+                            <div class="info">
+                                +2 Yesterday
+                            </div>
+                        </div>
+                        <div class="card blue">
+                            <div class="name">
+                                Orders
+                            </div>
+                            <div class="price">
+                                3.270
+                            </div>
+                            <div class="info">
+                                +5% Last Week
+                            </div>
+                        </div>
+                        <div class="card purple">
+                            <div class="name">
+                                This Year's Income
+                            </div>
+                            <div class="price">
+                                Rp. 1.000.000.000.000
+                            </div>
+                            <div class="info">
+                                +10 Last Year
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart">
+                        <div class="header">
+                            <div class="name">
+                                Revenua
+                            </div>
+                            <div class="action">
+                                Month
+                                <img src="img/icon/arrow-down-sign-to-navigate 1.png">
+                            </div>
+                        </div>
+
+                        <div class="main">
+                            <canvas id="myChart" width="400" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="chart">
+                        <div class="header">
+                            <div class="name">
+                                Recent Order
+                            </div>
+                            <div class="action">
+                                Today
+                                <img src="img/icon/arrow-down-sign-to-navigate 1.png">
+                            </div>
+                        </div>
+
+                        <div class="main">
+                            <div class="table-responsive">          
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th>INVOICES</th>
+                                      <th>CASHIER</th>
+                                      <th>DATE</th>
+                                      <th>ORDERS</th>
+                                      <th>AMOUNT</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>#10928</td>
+                                      <td>Cashier 1</td>
+                                      <td>06 October 2020</td>
+                                      <td>Coffe</td>
+                                      <td>Rp. 120.000</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </article>
+               
+            </section>
+        </main>
+
+        <!--Create Modal-->
+
+        <div class="modal" id="modal">
+
+            <!--Modal Add Item-->
+            <div class="addItem" id="addItem">
+                <!--Modal Header-->
+                <div class="header">
+                    <div class="title">
+                        Add Item
+                    </div>
+
+                    <div class="navigation">
+                        <button onclick="closeModal('addItem')">
+                            x
+                        </button>
+                    </div>
+                </div>
+
+                <!--Modal Body-->
+                <div class="body">
+                    <div class="item">
+                        <div class="title">Name</div>
+                        <div class="action">
+                            <input type="text" name="addProductName" id="addProductName">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Image</div>
+                        <div class="action">
+                            <input type="text" name="addProductImage" id="addProductImage">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Price</div>
+                        <div class="action">
+                            <input type="text" name="addProductPrice" id="addProductPrice" style="width: 80%;">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">Category</div>
+                        <div class="action">
+                            <div class="dropdown" style="width: 60%;">
+                                <div class="header">
+                                    <div class="value">Category</div>
+                                    <div class="icon"><img src="img/icon/Polygon.png"></div>
+                                </div>
+                                <div class="list">
+                                    <div class="item">Food</div>
+                                    <div class="item">Drink</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="footer">
+                    <button style="background-color: #F24F8A;" onclick="closeModal('addItem')">Cancel</button>
+                    <button style="background-color: #57CAD5;">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            
+        </footer>
+    </body>
+</html>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+            datasets: [{
+                label: 'This Month',
+                data: [10, 12, 11, 14, 15, 10, 10, 12, 11, 14, 15, 10, 10, 12, 11, 14, 15, 10, 10, 12, 11, 14, 15, 10, 10, 12, 11, 14, 15, 10],
+                backgroundColor: [
+                    'rgba(255, 255, 255, 0.2)',
+                ],
+                borderColor: [
+                    '#00F1FF'
+                ],
+                borderWidth: 3
+            },{
+                label: 'Last Month',
+                data: [13, 12, 14, 11, 10, 12, 13, 12, 14, 11, 10, 12, 13, 12, 14, 11, 10, 12, 13, 12, 14, 11, 10, 12, 13, 12, 14, 11, 10, 12, 13, 12, 14, 11, 10, 12],
+                backgroundColor: [
+                    'rgba(255, 255, 255, 0.2)',
+                ],
+                borderColor: [
+                    '#FFB8C6'
+                ],
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        max: 15,
+                        min: 10,
+                        stepSize: 1
+                    }
+                }]
+            }
+        }
+    });
+    </script>
