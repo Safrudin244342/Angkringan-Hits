@@ -94,7 +94,6 @@ function changeUpEstimasi(id){
     
     let product = listProducts.filter(value => value.id == id)[0]
     let order = listOrders.filter(value => value.id == id)[0]
-    console.log(listOrders)
     
     if(parseInt(order.estimasi) < parseInt(product.quantity)){
         order.estimasi = parseInt(order.estimasi) + 1
@@ -221,7 +220,6 @@ function addCart(id){
         let newListOrders = listOrders.filter(value => value.id != product.id)
 
         listOrders = newListOrders
-        console.log(listOrders)
         upadatePriceOrder()
 
         if (newListOrders.length == 0){
