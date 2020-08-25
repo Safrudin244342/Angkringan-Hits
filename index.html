@@ -28,6 +28,9 @@
 
                     <div class="cart" id="btnOrder" onclick="showListOrder()">
                         <img src='img/icon/cart.png' width='24' height=24>
+                        <div id="countOrder" style="position: absolute; top: 50%; right: 20px; padding: 2px; background-color: #57CAD5; border-radius: 10px;">
+                            0
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,3 +246,6 @@
 </html>
 <script type="text/javascript" src="js/controller.js"></script>
 <script type="text/javascript" src="js/view.js"></script>
+<script>
+    showProducts(listProducts)
+</script>
