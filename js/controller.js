@@ -94,6 +94,7 @@ function changeUpEstimasi(id){
     
     let product = listProducts.filter(value => value.id == id)[0]
     let order = listOrders.filter(value => value.id == id)[0]
+    console.log(listOrders)
     
     if(parseInt(order.estimasi) < parseInt(product.quantity)){
         order.estimasi = parseInt(order.estimasi) + 1
@@ -154,8 +155,13 @@ function upadatePriceOrder(){
         newPrice += (parseInt(value.price) * parseInt(value.estimasi))
     }
 
-    document.getElementById("pay").innerHTML = `Rp. ${changeToRupiah(newPrice)}*`
-    document.getElementById("countOrder").innerHTML = listOrders.length
+    document.getElementById("pay").innerHTML = `Rp. ${changeToRupiah(newPrice)}*`;
+    document.getElementById("countOrder").innerHTML = listOrders.length;
+    let elmCounts = document.querySelectorAll("[id='countOrder']");
+
+    for(elmCount of elmCounts){
+        elmCount.innerHTML = listOrders.length;
+    }
 }
 
 function addCart(id){
@@ -220,6 +226,7 @@ function addCart(id){
         let newListOrders = listOrders.filter(value => value.id != product.id)
 
         listOrders = newListOrders
+        console.log(listOrders)
         upadatePriceOrder()
 
         if (newListOrders.length == 0){
