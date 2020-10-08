@@ -1,4 +1,4 @@
-# Angkringan-Hits
+# Angkringan-Hits.
 
 simple website for managemen your caffe
 
